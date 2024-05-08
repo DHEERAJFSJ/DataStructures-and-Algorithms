@@ -1,0 +1,21 @@
+factorial program using recursion
+package com.iw.reg;
+import java.util.*;
+public class Demo
+{
+public static void main(String args[])
+{
+	//printing 1 - 10 without using loop
+	//factorial using recursion
+	int num=5;
+	System.out.println(factorial(num));
+}
+static int factorial(int num)
+{
+	if(num==0)
+	{
+		return 1;
+	}
+   return num*factorial(num-1);	
+}
+}
