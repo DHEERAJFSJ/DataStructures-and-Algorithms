@@ -1,0 +1,19 @@
+//program to reverse a number
+package com.iw.reg;
+import java.util.*;
+import java.lang.*;
+public class Demo
+{
+	public static void main(String[] args)
+	{
+		//Program to reverse a number 
+		int number=12345673;
+		while(number>0)
+		{
+			int res=number%10;
+			System.out.print(res);
+			number/=10;
+			
+		}
+	}
+	}
