@@ -1,0 +1,22 @@
+//program to count the occurences of a character in a string
+package com.iw.reg;
+import java.util.*;
+import java.lang.*;
+public class Demo
+{
+	public static void main(String[] args)
+	{
+		//Program to cout the occurences of a character in a string
+		String name="Dheeraj appam";
+		char ch='a';
+		int count=0;
+		for(int i=0;i<name.length();i++)
+		{
+			if(name.charAt(i)==ch)
+			{
+				count++;
+			}
+		}
+		System.out.println(count);
+	}
+	}
