@@ -1,0 +1,22 @@
+//check when the number is armstrong or not 
+package com.iw.reg;
+import java.util.*;
+import java.lang.*;
+public class Demo
+{
+	public static void main(String[] args)
+	{
+		System.out.println(isArmstrong(153));}
+	static Boolean isArmstrong(int a)
+	{
+		int original=a;
+		int sum=0;
+		while(a>0)
+		{
+			int rem=a%10;
+			sum+=rem*rem*rem;
+			a/=10;
+		}
+		return original==sum;
+	}
+}
