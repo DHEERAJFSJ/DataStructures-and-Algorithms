@@ -1,0 +1,29 @@
+finding the all 3 digit armstrong numbers
+package com.iw.reg;
+import java.util.*;
+import java.lang.*;
+public class Demo
+{
+	public static void main(String[] args)
+	{
+		for(int i=100;i<1000;i++)
+		{
+			if(isArmstrong(i))
+			{
+				System.out.println(i);
+			}
+		}
+	}
+	static Boolean isArmstrong(int a)
+	{
+		int original=a;
+		int sum=0;
+		while(a>0)
+		{
+			int rem=a%10;
+			sum+=rem*rem*rem;
+			a/=10;
+		}
+		return original==sum;
+	}
+	}
