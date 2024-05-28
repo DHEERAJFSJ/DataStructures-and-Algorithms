@@ -1,0 +1,19 @@
+package com.iw.reg;
+import java.util.*;
+public class Demo
+{
+	public static void main(String[] args)
+	{
+		int[] arr= {45,32,12,65,23,78};
+		//finding the maximum element in array
+		int temp=0;
+		for(int i=0;i<arr.length;i++)
+		{
+			if(arr[i]>arr[temp])
+			{
+				temp=i;
+			}
+		}
+		System.out.println(arr[]);
+	}
+}
