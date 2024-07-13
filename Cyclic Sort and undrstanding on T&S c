@@ -1,0 +1,197 @@
+13-07-2024
+BubbleSort,SelectionSort,InsertionSort,CyclicSort
+
+package com.java.dsa;
+
+import java.util.Arrays;
+
+public class Demo1
+{
+public static void main(String args[])
+{/*Bubble Sort
+	int[] arr= {90,40,50,30,21,12,234};
+	new Demo1().bubbleSort(arr);
+	System.out.println(Arrays.toString(arr));
+}
+void bubbleSort(int[] arr)
+{	
+	for(int i=0;i<arr.length;i++)
+	{
+     for(int j=arr.length-1;j>0;j--)
+         {
+			if(arr[j]>arr[j-1])
+			{
+				int temp= arr[j];
+				arr[j]=arr[j-1];
+				arr[j-1]=temp;
+			}
+		}
+	}
+	*/
+	//Selection Sort where we check the indexed Eelemnts
+	int[] arr= {90,40,50,30,21,12,234};
+	insertionSort(arr);
+	System.out.println(Arrays.toString(arr));
+}
+	/*static void selectionSort(int[] arr)
+	{
+	 for(int i=0;i<arr.length;i++)
+	 {
+		int smallElementIndex=i;
+		for(int j=i+1;j<arr.length;j++)
+		{
+			if(arr[j]>arr[smallElementIndex])
+			{
+				smallElementIndex=j;
+			}
+		}
+		int smallElement=arr[smallElementIndex];
+		arr[smallElementIndex]=arr[i];
+		arr[i]=smallElement;
+	 
+//InsertionSort
+static void insertionSort(int[] arr)
+{
+for(int i=0;i<arr.length-1;i++)
+{
+for(int j=i+1;j>0;j--)
+{
+if(arr[j]<arr[j-1])
+{
+	int temp=arr[j];
+	arr[j]=arr[j-1];
+	arr[j-1]=temp;
+}
+}
+}
+}
+}
+}*/
+//cyclic sort
+package com.java.dsa;
+import java.util.Arrays;
+import java.util.*;
+public class Demo1
+{
+	public static void main(String args[]) {
+		
+		int[] arr= {2,4,5,6,1,7,8,9,3};
+		cyclicSort(arr);
+		System.out.println(Arrays.toString(arr));
+	}
+	static void cyclicSort(int[] arr)
+	{
+		int i=0;
+		while(i<arr.length)
+		{
+			int element=arr[i]-1;
+			if(arr[i]!=arr[element])
+			{
+				int temp=arr[i];
+				arr[i]=arr[element];
+				arr[element]=temp;
+			}
+			else
+				i++;
+		}
+	}
+	}
+	
+
+
+
+2.Program to find the Fibonacci series
+package com.java.dsa;
+
+import java.util.Arrays;
+
+public class Demo1
+{
+public static void main(String args[])
+{
+	//fibonacci series
+	System.out.println(fibo(16));
+	}
+static int fibo(int num) {
+	if(num==0) //base condition1
+		return 0;
+	if(num==1) //base condition2 
+		return 1;
+	return fibo(num-1)+fibo(num-2);
+}
+}
+
+3.Sum of Numbers Using Recursion 
+package com.java.dsa;
+
+import java.util.Arrays;
+
+public class Demo1
+{
+public static void main(String args[])
+{
+	int num=1235;
+	int result=sum(num);
+	System.out.println(result);
+	}
+static int sum(int num)
+{
+	if(num==0)
+		return 0;
+	return (num%10)+sum(num/10);
+}
+}
+
+4.Power OF A Number using Recursion 
+package com.java.dsa;
+import java.util.Arrays;
+
+public class Demo1
+{
+	public static void main(String args[])
+	{
+		//2power3= using recursion;
+		System.out.println(Math.pow(2, 3));
+		System.out.println(powerTimes(3));
+	}
+	static int powerTimes(int times)
+	{
+		if(times==0)
+		{
+			return 1;
+		}
+		int num=2;
+		return num*powerTimes(times-1);
+	}
+	
+}
+
+5.Remove Duplicates From an Array
+package com.java.dsa;
+import java.util.Arrays;
+import java.util.*;
+public class Demo1
+{
+	public static void main(String args[])
+	{//own solution for finding a missing number in an array
+		int[] arr= {1,2,4,5,6,3,2,4,10};
+		System.out.println(Arrays.toString(arr));
+		removeDuplicates(arr);
+	}
+	static void removeDuplicates(int[] arr)
+	{
+		List<Integer> li=new LinkedList<>();
+		Arrays.sort(arr);
+		for(int i=0;i<arr.length-1;i++)
+		{
+			if(arr[i]!=arr[i+1])
+			{
+				li.add(arr[i]);
+			}
+		}
+		System.out.println(li);
+	}
+	
+}
+
+
