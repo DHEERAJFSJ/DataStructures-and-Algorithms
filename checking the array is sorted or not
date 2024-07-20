@@ -1,0 +1,25 @@
+public class Demo
+{
+    public static void main(String args[])
+    {
+        int[] arr={11,12,35};
+        boolean ans=search(arr);
+        System.out.print(ans);
+    }
+    static boolean search(int[] arr)
+    {
+        boolean sorted=true;
+        int i=0;
+        while(i<arr.length-1)
+        {
+            if(arr[i]<arr[i+1])
+            {
+                i++;
+            }
+            else
+                return false;
+
+        }
+      return sorted;
+    }
+}
